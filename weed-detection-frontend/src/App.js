@@ -1,19 +1,22 @@
 import './App.css';
-import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from './components/Footer'
-function App() {
-  return (
+import Header from "./components/Header";
 
-    <Router>
-      <div>
-        <Routes>
-          <Route path="/footer" element={<Footer/>}/>
+function App() {
+    return (
+
+        <Router >
+        <div >
+        <Routes >
+        <Route path = "/footer" element = { < Footer />}/>
+            <Route path = "/header" element = { < Header /> }/>
         </Routes>
-      </div>
-    </Router>
-   
-    
-  );
+        </div>
+        </Router>
+
+
+    );
 }
 
-export default App;
+export  default  App;

@@ -1,0 +1,108 @@
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #D6EFD8;;
+  padding: 10px;
+  position: relative;
+  height: 130px;
+  box-sizing: border-box;
+}
+
+/* Logo and text */
+.logo-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+.logo-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 77.45px;
+  color: #508D4E;
+  margin-left: 20px;
+}
+
+
+/* Navigation menu */
+.navigation {
+  position: absolute;
+  top: 73px;
+  left: 850px;
+ 
+  height: 55px;
+  opacity: 0.9; /* Reduced opacity if needed, you can remove this */
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  gap: 40px;
+}
+
+.navigation a {
+  font-family: 'Inter', sans-serif;
+  
+  font-size: 23px;
+ 
+  text-align: center;
+  color: #393A3D;
+  text-decoration: none;
+  position: relative;
+
+}
+
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 7px; /* Set the height of the underline */
+  left: 0;
+  bottom: -10px; /* Adjust based on spacing below the text */
+  background-color: transparent;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navigation a.active::after {
+  background-color: #508D4E; /* Green underline for active link */
+}
+
+
+
+/* Login button */
+.login-button {
+  position: absolute;
+  top: 73px;
+  left: 1530px;
+  width: 118px;
+  height: 45px;
+  background-color: #508D4E;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 27.84px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #406d3d; /* Optional hover effect */
+}
