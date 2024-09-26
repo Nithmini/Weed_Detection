@@ -28,7 +28,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#about-us"
+              href="/aboutus"
               className={activeMenu === 'about-us' ? 'active' : ''}
               onClick={() => handleMenuClick('about-us')}
             >
@@ -37,7 +37,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#services"
+              href="/services"
               className={activeMenu === 'services' ? 'active' : ''}
               onClick={() => handleMenuClick('services')}
             >
@@ -46,7 +46,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#contact-us"
+              href="/contactus"
               className={activeMenu === 'contact-us' ? 'active' : ''}
               onClick={() => handleMenuClick('contact-us')}
             >

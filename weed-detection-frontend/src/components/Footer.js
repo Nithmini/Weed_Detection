@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/Footer.css';
 import seaLogo from './images/logo.png';
-import { FaInstagram, FaTwitter, FaFacebookF, FaLinkedinIn, FaFacebook } from 'react-icons/fa'; 
+import { FaInstagram, FaTwitter, FaFacebookF, FaLinkedinIn, FaFacebook } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer">

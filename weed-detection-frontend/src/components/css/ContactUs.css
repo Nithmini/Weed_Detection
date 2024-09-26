@@ -1,0 +1,158 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: #f6f6f6;
+}
+
+.contact-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 20px;
+    margin-left: -1250px !important;
+}
+
+
+.contact-page .card {
+    width: 800px;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.send-message-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 33px;
+    font-weight: 600;
+    text-align: center;
+    color: #454545;
+    margin-bottom: 30px;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.full-name,
+.email-input,
+.message-input {
+    width: 693px;
+    height: 59px;
+    padding: 10px;
+    margin-left: 73px;
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 2px solid #C7C7C7;
+    border-radius: 9px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.full-name::placeholder,
+.email-input::placeholder,
+.message-input::placeholder {
+    color: #A7A7A7;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    padding-left: 20px;
+    line-height: 25.41px;
+    background-color: transparent;
+    opacity: 1;
+}
+
+
+
+.message-input {
+    height: 120px;
+    resize: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 35px;
+
+}
+
+.submit-button,
+.clear-button {
+    width: 325px;
+    height: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+
+    transition: background-color 0.3s ease;
+}
+
+.submit-button {
+    background-color: #004d00;
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #006600;
+}
+
+.clear-button {
+    background-color: #006400;
+    color: #fff;
+}
+
+.clear-button:hover {
+    background-color: #008000;
+}
+
+
+
+
+.email-input {
+    height: 59px;
+}
+
+.message-input {
+    height: 120px;
+}
+
+.full-name,
+.email-input,
+.message-input {
+    padding-left: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .full-name,
+    .email-input,
+    .message-input {
+        width: 100%;
+    }
+
+    .submit-button,
+    .clear-button {
+        width: 100px;
+    }
+}

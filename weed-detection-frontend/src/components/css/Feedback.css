@@ -1,0 +1,89 @@
+.feedback-section {
+  background-color: #f2f8ed;
+  padding: 40px;
+}
+
+.feedback-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 77.45px;
+  color: #000000;
+  margin-top: 5px;
+  margin-left: 65px;
+}
+
+
+.feedback-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+
+.feedback-page .card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 22px 11px #0000001A;
+  width: 250px;
+  height: 220px;
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+}
+
+.feedback-page .card-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.feedback-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+
+  text-align: center;
+  max-width: 180px;
+  margin: 20px auto 0;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+
+
+.feedback-button {
+  width: 204px;
+  height: 66px;
+  position: absolute;
+  top: 631px;
+  left: 1283px;
+  background: #1A5319D9;
+
+
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-button span {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 150;
+  line-height: 42.36px;
+  color: #FFFFFF;
+  text-align: center;
+  background: transparent;
+}
