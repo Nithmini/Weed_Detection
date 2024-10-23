@@ -1,0 +1,115 @@
+.addfeedback-container {
+    background-color: #f2f8ed;
+    padding: 40px;
+    padding-bottom: 100px;
+}
+
+.addfeedback-container h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 77.45px;
+    color: #000000;
+    margin-top: 5px;
+    margin-left: 65px;
+}
+
+.addfeedback-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 700px;
+    height: auto;
+    margin-left: 500px;
+  
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.emoji {
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+/* Change size and color of selected emoji */
+.selected {
+    font-size: 60px; /* Bigger size for the selected emoji */
+    color: green;
+}
+
+.add-feedback-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif; /* Ensure the input text uses the same font */
+}
+
+/* Placeholder text styling */
+.add-feedback-input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #A7A7A7;
+    font-weight: 500;
+}
+
+
+.feedback-button-group {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.feedback-save-button,
+.feedback-cancel-button {
+    width: 205px;
+    height: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-save-button {
+    background-color: #004d00;
+    color: #fff;
+}
+
+.feedback-save-button:hover {
+    background-color: #006600;
+}
+
+.feedback-cancel-button {
+    background-color: #004d00;
+    color: #fff;
+}
+
+.feedback-cancel-button:hover {
+    background-color: #008000;
+}
+
+p {
+    font-size: 24px;
+    font-family: 'Josefin Sans';
+    font-weight: 200;
+    line-height: 40px;
+    text-align: center;
+}

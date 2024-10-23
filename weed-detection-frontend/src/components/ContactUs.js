@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import axios
 import './css/ContactUs.css';
 
 const ContactUs = () => {
@@ -8,6 +9,9 @@ const ContactUs = () => {
         message: ''
     });
 
+    const [error, setError] = useState(null); // To handle errors
+    const [successMessage, setSuccessMessage] = useState(null); // To display success message
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -16,10 +20,36 @@ const ContactUs = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log('Form Data:', formData);
+        try {
+            // Send the form data to the backend using axios
+            const response = await axios.post('http://localhost:5000/contact/add', {
+                name: formData.fullName,
+                email: formData.email,
+                message: formData.message
+            });
+
+            // Check if the submission was successful
+            if (response.status === 200) {
+                setSuccessMessage('Your message has been sent successfully!');
+                setError(null); // Clear any previous errors
+                // Clear the form
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    message: ''
+                });
+            }
+        } catch (err) {
+            // Handle errors from the backend
+            if (err.response && err.response.data) {
+                setError(err.response.data.error || 'Failed to send message.');
+            } else {
+                setError('An error occurred. Please try again.');
+            }
+            setSuccessMessage(null); // Clear any success message
+        }
     };
 
     const handleClear = () => {
@@ -28,6 +58,8 @@ const ContactUs = () => {
             email: '',
             message: ''
         });
+        setError(null); // Clear any error message
+        setSuccessMessage(null); // Clear any success message
     };
 
     return (
@@ -64,6 +96,12 @@ const ContactUs = () => {
                             onChange={handleChange}
                             required
                         />
+
+                        {/* Display error message */}
+                        {error && <p className="error-message">{error}</p>}
+                        {/* Display success message */}
+                        {successMessage && <p className="success-message">{successMessage}</p>}
+
                         <div className="button-group">
                             <button type="submit" className="submit-button">Send</button>
                             <button type="button" className="clear-button" onClick={handleClear}>Clear</button>

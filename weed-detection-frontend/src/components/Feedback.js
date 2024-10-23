@@ -2,6 +2,7 @@ import React from "react";
 import "./css/Feedback.css";
 import farmerImage from "./images/farmer.png";
 import girlImage from "./images/girl.png";
+import { Link } from 'react-router-dom';
 
 function Feedback() {
   return (
@@ -10,7 +11,7 @@ function Feedback() {
         <section className="feedback-section">
           <h2>Feedback</h2>
           <div className="feedback-cards">
-            <div className="card">
+            <div className="card-feedback">
               <img
                 src={farmerImage}
                 alt="person 1"
@@ -21,22 +22,20 @@ function Feedback() {
               </p>
             </div>
 
-            <div className="card">
+            <div className="card-feedback">
               <img
                 src={girlImage}
                 alt="person 2"
                 className="card-image"
               />
               <p className="feedback-text">
-                This weed<br />
-                identification tool is<br />
-                a game-changer for<br />
-                my crop!
+                This tool has transformed <br />the way I manage my crops.
+                
               </p>
             </div>
           </div>
 
-          <button className="feedback-button">  <span>Give Feedback</span></button>
+          <button className="feedback-button">  <Link to="/addfeedback" className="button-link">Give Feedback</Link></button>
         </section>
       </main>
     </div>

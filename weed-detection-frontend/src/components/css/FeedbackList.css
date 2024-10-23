@@ -1,0 +1,52 @@
+.feedback-list-container {
+    background-color: #f2f8ed;
+    padding: 40px;
+  
+  }
+
+  .feedback-list-container h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 77.45px;
+    color: #000000;
+    margin-top: 5px;
+    margin-left: 65px;
+}
+  
+  .feedback-cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  
+  .feedback-card-list {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feedback-card-list:hover {
+    transform: scale(1.05);
+  }
+  
+  .feedback-list-emoji {
+    font-size: 50px;
+  }
+  
+  .feedback-content-list h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .feedback-content-list p {
+    font-size: 16px;
+    color: #666;
+  }
+  

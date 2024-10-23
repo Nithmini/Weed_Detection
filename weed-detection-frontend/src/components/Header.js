@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './css/Header.css'; // Import the CSS file
 import seaLogo from './images/logo.png';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState('home'); // Default active menu is 'home'
 
@@ -18,53 +18,53 @@ const Header = () => {
       <nav className="navigation">
         <ul>
           <li>
-            <a
-              href="#home"
+            <Link
+              to="/"
               className={activeMenu === 'home' ? 'active' : ''}
               onClick={() => handleMenuClick('home')}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/aboutus"
+            <Link
+              to="/aboutus"
               className={activeMenu === 'about-us' ? 'active' : ''}
               onClick={() => handleMenuClick('about-us')}
             >
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/services"
+            <Link
+              to="/services"
               className={activeMenu === 'services' ? 'active' : ''}
               onClick={() => handleMenuClick('services')}
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/contactus"
+            <Link
+              to="/contactus"
               className={activeMenu === 'contact-us' ? 'active' : ''}
               onClick={() => handleMenuClick('contact-us')}
             >
               Contact Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/feedback"
+            <Link
+              to="/feedback"
               className={activeMenu === 'feedback' ? 'active' : ''}
               onClick={() => handleMenuClick('feedback')}
             >
               Feedback
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
-      <button className="login-button">Login</button>
+      {/*  <button className="login-button">Login</button>*/}
     </header>
   );
 };

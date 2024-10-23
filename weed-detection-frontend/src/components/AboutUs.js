@@ -18,7 +18,8 @@ const AboutUs = () => {
 
         <div className="about-us-image-container">
           <div className="image-background"></div>
-          <img src={aboutImage} alt="About Us" className="about-us-image" />
+          <img src="https://res.cloudinary.com/dorcq99nr/image/upload/v1652809168/AgriProducts/sign_up_t2t08q.gif" fluid  alt="About Us" className="about-us-image" />
+          
         </div>
       </div>
     </div>

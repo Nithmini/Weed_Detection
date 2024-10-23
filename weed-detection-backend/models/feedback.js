@@ -1,15 +1,25 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
+
 const FeedbackSchema = new Schema({
 
+name :{
+    type: String,
+},
 
-    name: {
-        type: String,
-    },
-    feedback: {
-        type: String,
-    },
+description :{
+    type: String, 
+},
 
-}, { timestamps: true });
+emoji:{
+    type: String,
+},
+
+
+},{ timestamps: true });
+
+
 const Feedback = mongoose.model("Feedbacks", FeedbackSchema);
 module.exports = Feedback;
+

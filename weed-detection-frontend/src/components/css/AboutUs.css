@@ -23,7 +23,7 @@
     top: 10px;
     left: 84px;
     font-family: 'Inter', sans-serif;
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 77.45px;
     text-align: center;
@@ -35,9 +35,9 @@
     height: 320px;
     position: absolute;
     top: 200px;
-    left: 643px;
+    left: 743px;
     font-family: 'Roboto', sans-serif;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 60px;
     text-align: center;
@@ -47,18 +47,18 @@
 
 .about-us-image-container {
     position: relative;
-    width: 363.75px;
-    height: 504.29px;
+    height: 444.29px;
     top: 50px;
-    left: 200px;
+    left: 100px;
+    padding-bottom: 50px;
 }
 
 .image-background {
     position: absolute;
-    width: 363.75px;
+   
     height: 442.37px;
     top: 40px;
-    left: -80px;
+    left: -40px;
     background: #D6EFD866;
     transform: rotate(-26.54deg);
     border-radius: 100%;
@@ -66,10 +66,8 @@
 
 .about-us-image {
     position: absolute;
-    width: 252.32px;
     height: 504.29px;
     top: 0;
-    left: 0;
     object-fit: cover;
     opacity: 1;
 }
