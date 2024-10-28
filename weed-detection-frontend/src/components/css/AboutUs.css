@@ -4,15 +4,23 @@
     justify-content: center;
     align-items: center;
     min-height: 50vh;
-    background-color: #f6f6f6;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+   
+    animation: gradientBackground 10s ease infinite;
 }
+ /* Background Gradient Animation */
+ @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
 .about-us-section {
     position: relative;
     width: 100%;
     height: auto;
     padding: 100px 50px;
-    background-color: #f6f6f6;
+   
 
 }
 

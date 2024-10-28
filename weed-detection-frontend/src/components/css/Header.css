@@ -5,7 +5,7 @@
   background-color: #D6EFD8;;
   padding: 10px;
   position: relative;
-  height: 130px;
+  height: 135px;
   box-sizing: border-box;
   max-width:2400px;
 }
@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 40px;
+  top: 2px;
   left: 40px;
 }
 

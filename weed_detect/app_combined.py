@@ -37,7 +37,7 @@ def preprocess_image(image_path, target_size):
         img = np.expand_dims(img, axis=0)  # Add batch dimension
     return img
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])#route for flaskapp
 def predict():
     # Check for the image file in the request
     if 'file' not in request.files:

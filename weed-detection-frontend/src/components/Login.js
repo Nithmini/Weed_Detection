@@ -13,30 +13,29 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Validation
+        setError(""); // Clear previous error
+    
         if (!email || !password) {
-            alert("Please fill in all fields");
+            setError("Please fill in all fields");
             return;
         }
-
-        const data = { email, password };
-
+    
         try {
-            const response = await axios.post("http://localhost:5000/user/log", data);
-
+            const response = await axios.post("http://localhost:5000/user/log", { email, password });
+    
             if (response.status === 200) {
                 alert("Sign in successfully");
-                navigate('/dashboard'); // Modify the path based on your routing
+                navigate("/weed");
             }
         } catch (error) {
-            if (error.response && error.response.status === 401) {
-                setError("Invalid Email or Password");
+            if (error.response && error.response.data.error) {
+                setError(error.response.data.error); // Display server error message
             } else {
                 setError("Something went wrong. Please try again.");
             }
         }
     };
+    
 
     return (
         <div className="container">

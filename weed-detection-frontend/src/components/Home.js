@@ -1,14 +1,14 @@
 import React from 'react';
-import weedImage1 from "./images/Crabgrass.png";
-import weedImage2 from "./images/Nutgrass.jpg";
-import weedImage3 from "./images/Purslane2.jpg";
-import weedImage4 from "./images/Morningglorynew.jpg";
-import weedImage5 from "./images/Goosegrass.jpeg";
-import weedImage6 from "./images/Spiny Amaranth.jpg";
+//import weedImage1 from "./images/Crabgrass.png";
+//import weedImage2 from "./images/Nutgrass.jpg";
+//import weedImage3 from "./images/Purslane2.jpg";
+//import weedImage4 from "./images/Morningglorynew.jpg";
+//import weedImage5 from "./images/Goosegrass.jpeg";
+//import weedImage6 from "./images/Spiny Amaranth.jpg";
 import serviceImage1 from "./images/service1.jpg";
 import serviceImage2 from "./images/service10.png";
 import serviceImage3 from "./images/service11.png";
-import homeImage1 from "./images/pikaso_edit_weed-detection-background-image (1).jpeg";
+//import homeImage1 from "./images/pikaso_edit_weed-detection-background-image (1).jpeg";
 import WeedsCarousel from './WeedsCarousel';
 import { Link } from 'react-router-dom';
 
@@ -26,12 +26,12 @@ const Home = () => {
         <div className="header-content">
           <div className="header-text">
             <h1>Say Goodbye to <br /> Weeds</h1>
-            <Link to="/imageUpload" style={{ textDecoration: 'none' }} className="garden-button">
+            <Link to="/register" style={{ textDecoration: 'none',marginLeft:'50px' }} className="garden-button">
             Get Start
             </Link>
-            <Link to="/herbicidePredictor" style={{ textDecoration: 'none' , marginLeft: '10px' }} className="garden-button">
+            {/* <Link to="/herbicidePredictor" style={{ textDecoration: 'none' , marginLeft: '10px' }} className="garden-button">
             Herbicide Predictor
-            </Link>
+            </Link> */}
          
           </div>
           <div className="header-image">
@@ -111,14 +111,17 @@ const Home = () => {
         </div>
       </section>*/}
         <section className="weeds-section">
-  <div className="weeds-text">
-    <h2><b>Common Weeds</b></h2>
-    <p>"They are quick to grow and can quickly out-compete with crops for resources like water, sun & essential nutrients. They impair the health and aesthetics of plants and crops. Understand the problems caused by weeds and how to manage them for a lush, flourishing landscape."</p>
-  </div>
-  <div className="weeds-carousel">
-    <WeedsCarousel />
+  <div className="weeds-container">
+    <div className="weeds-text">
+      <h2><b>Common Weeds</b></h2>
+      <p>"They are quick to grow and can quickly out-compete with crops for resources like water, sun & essential nutrients. They impair the health and aesthetics of plants and crops. Understand the problems caused by weeds and how to manage them for a lush, flourishing landscape."</p>
+    </div>
+    <div className="weeds-carousel">
+      <WeedsCarousel/>
+    </div>
   </div>
 </section>
+
 
 
       {/* About Us Section */}
@@ -144,7 +147,7 @@ const Home = () => {
           </div>
           <div className="service-card">
             <img src={serviceImage3} alt="Medication for Weeds" />
-            <h3>Medication for the Weeds</h3>
+            <h3>Herbicide for the Weeds</h3>
           </div>
         </div>
         <Link to="/services" style={{ textDecoration: 'none' }} className="see-more-button">

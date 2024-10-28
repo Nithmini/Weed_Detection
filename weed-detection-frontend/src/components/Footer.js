@@ -1,13 +1,11 @@
 import React from 'react';
 import './css/Footer.css';
-import seaLogo from './images/logo.png';
+//import seaLogo from './images/logo.png';
 import { FaInstagram, FaTwitter, FaFacebookF, FaLinkedinIn, FaFacebook } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-logo">
-        <img src={seaLogo} alt="Sea Logo" className="logo" />
-      </div>
+     
       <div className="footer-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>

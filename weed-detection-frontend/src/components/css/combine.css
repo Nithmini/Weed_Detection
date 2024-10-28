@@ -1,0 +1,178 @@
+
+/* Container and Background Animation */
+.container123 {
+    position: relative;
+    min-height: 100vh;
+    max-width: 1500px; /* Set a max-width for narrower content */
+    width: 90%; /* Responsive width, adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto; /* Center container horizontally */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    background-size: 200% 200%;
+    animation: gradientBackground 10s ease infinite;
+}
+
+  
+  /* Background Gradient Animation */
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Left Floating Animation Shape */
+  .left-animation {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(34, 193, 195, 0.7);
+    border-radius: 50%;
+    animation: floatShape 10s ease-in-out infinite;
+  }
+  
+  
+  /* Keyframes for Floating Shape */
+  @keyframes floatShape {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  
+  
+/* Form and Result Wrapper */
+.form-result-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1300px;
+  margin-top: 20px;
+}
+
+
+/* Result Card */
+.result-card {
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+  color: #333;
+  padding: 25px;
+  margin-top: 0; /* Align with form section */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 35%;
+  border: 2px solid #4CAF50;
+  transition: transform 0.3s ease;
+}
+
+ /* Result Card */
+
+
+.result-card:hover {
+    transform: scale(1.02);
+}
+
+.result-card h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.result-card p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Form Section */
+.form-section {
+  background: rgba(234, 239, 235, 0.8);
+  padding: 30px;
+  border-radius: 8px;
+  width: 60%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Elements */
+.form-section label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-section input[type="file"],
+.form-section select,
+.form-section input,
+.form-section button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px; /* Space between each input */
+  transition: border-color 0.3s ease;
+}
+
+.form-section input[type="file"]:focus,
+.form-section select:focus,
+.form-section input:focus,
+.form-section button:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Button Styling */
+.form-section button[type="submit"] {
+  background: #1b2c1c;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button[type="submit"]:hover {
+  background: #16931c;
+}
+
+/* Form Header */
+.form-section h3 {
+  font-size: 1.5rem;
+  color: #1b2c1c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Additional styling for Image Preview */
+.image-preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.image-preview img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Highlighted Outputs */
+.result-card p b {
+    font-size: 1.8rem;
+    color: #ff5722; /* Accent color for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}

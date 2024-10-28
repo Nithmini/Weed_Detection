@@ -2,8 +2,7 @@ const router = require("express").Router();
 let User = require("../models/user");
 const bcrypt = require('bcrypt');
 
-// Add User
-router.route("/add").post((req, res) => {
+router.route("/add").post(async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
@@ -11,28 +10,24 @@ router.route("/add").post((req, res) => {
         return res.status(422).json({ error: "Please add all fields" });
     }
 
-    User.findOne({ email: email })
-        .then((savedUser) => {
-            if (savedUser) {
-                return res.status(422).json({ error: "User already exists with that email" });
-            }
+    try {
+        const savedUser = await User.findOne({ email });
+        if (savedUser) {
+            return res.status(422).json({ error: "User already exists with that email" });
+        }
 
-            const newUser = new User({ email, password });
+        // Hash the password before saving
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new User({ email, password: hashedPassword });
 
-            newUser.save()
-                .then(() => {
-                    return res.status(201).json({ message: "User added successfully" });
-                })
-                .catch((err) => {
-                    console.log(err);
-                    return res.status(500).json({ error: "Failed to register user" });
-                });
-        })
-        .catch((err) => {
-            console.log(err);
-            return res.status(500).json({ error: "Server error" });
-        });
+        await newUser.save();
+        return res.status(201).json({ message: "User added successfully" });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Failed to register user" });
+    }
 });
+
 
 router.route("/log").post(async (req, res) => {
     const { email, password } = req.body;

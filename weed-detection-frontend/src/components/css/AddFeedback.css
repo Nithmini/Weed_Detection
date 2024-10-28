@@ -2,16 +2,24 @@
     background-color: #f2f8ed;
     padding: 40px;
     padding-bottom: 100px;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+   
+    animation: gradientBackground 10s ease infinite;
 }
-
+/* Background Gradient Animation */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 .addfeedback-container h2 {
     font-family: 'Inter', sans-serif;
-    font-size: 34px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 77.45px;
     color: #000000;
     margin-top: 5px;
-    margin-left: 65px;
+    margin-left: 75px;
 }
 
 .addfeedback-card {
@@ -22,7 +30,7 @@
     text-align: center;
     width: 700px;
     height: auto;
-    margin-left: 500px;
+    margin-left: 620px;
   
 }
 
